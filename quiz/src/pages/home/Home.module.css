@@ -1,0 +1,45 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    padding: 10px;
+    width: 70vw;
+}
+
+.text h1{
+    font-size: 1.6em;
+}
+
+
+.containerImg{
+    background-image: url('../../../public/Portal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 40vw;
+    justify-content: center;
+}
+
+.imgRyck{
+    width: 20em;
+}
+
+.imgMorty{
+    width: 20em;
+    
+}
+
+
+
+.containerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}

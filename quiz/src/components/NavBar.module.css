@@ -1,0 +1,30 @@
+
+
+.navBar{
+    width: 100%;
+    background-color: #95ff00;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+.link_list{
+    display: flex;
+}
+
+
+.link_list li{
+    list-style: none;
+}
+
+.link{
+  padding: 10px;
+  background-color:rgb(229, 255, 0);
+  color: #000;
+  width: 160px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-decoration: none;
+  margin: 0 5px;
+}
