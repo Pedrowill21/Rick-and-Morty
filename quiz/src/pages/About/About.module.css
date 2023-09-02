@@ -1,0 +1,25 @@
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text{
+    width: 80%;
+}
+
+.img{
+    width: 50%;
+}
+
+.case{
+    background-image: url("../../../public/Portal.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}

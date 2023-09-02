@@ -30,7 +30,6 @@ useEffect(()=>{
   }
 
    const Personagens =  await PackCharacter();
-   console.log(Personagens)
    setDados(Personagens);
 
   }
