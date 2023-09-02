@@ -1,38 +1,51 @@
 import styles from "./Form.module.css"
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const Form = ({lista, controlePontuacao}) => {
-    const [nome1, setNome1] = useState(lista[0].name)
-    const [nome2, setNome2] = useState(lista[1].name)
-    const [nome3, setNome3] = useState(lista[2].name)
-    const [opcao,setEscolha] = useState("")
-
-    function escolha(opcaoEscolhida){
-        setEscolha(opcaoEscolhida)
-    }
+const Form = ({ lista, controlePontuacao, gameOver }) => {
+  const [opcao, setEscolha] = useState('');
   
-    function handleSubmit(e){
-        e. preventDefault()
-        if(opcao === nome1){
-            controlePontuacao("ganhou")
-        }else{
-            controlePontuacao("perdeu")
-        }
+  function escolha(opcaoEscolhida) {
+    if (!gameOver) {
+      setEscolha(opcaoEscolhida);
     }
+  }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (opcao === lista[0].name) {
+      controlePontuacao('ganhou');
+    } else {
+      controlePontuacao('perdeu');
+    }
+  }
 
   return (
-    <div>
-        <form className={styles.form}>
-            <div className={opcao === nome1 ? "inputEscolhido" : "input"} onClick={()=>escolha(nome1)}>{nome1}</div>
-            <div className={opcao === nome2 ? "inputEscolhido" : "input"} onClick={()=>escolha(nome2)}>{nome2}</div>
-            <div className={opcao === nome3 ? "inputEscolhido" : "input"} onClick={()=>escolha(nome3)}>{nome3}</div>
-            <div>
-                <button className="btn" onClick={(e)=>handleSubmit(e)} >Próximo</button>
-            </div>
-        </form>
-    </div>
-  )
-}
+    <form className={styles.form}>
+      <div
+        className={opcao === lista[0].name ? 'inputEscolhido' : 'input'}
+        onClick={() => escolha(lista[0].name)}
+      >
+        {lista[0].name}
+      </div>
+      <div
+        className={opcao === lista[1].name ? 'inputEscolhido' : 'input'}
+        onClick={() => escolha(lista[1].name)}
+      >
+        {lista[1].name}
+      </div>
+      <div
+        className={opcao === lista[2].name ? 'inputEscolhido' : 'input'}
+        onClick={() => escolha(lista[2].name)}
+      >
+        {lista[2].name}
+      </div>
+      <div>
+        <button className="btn" onClick={handleSubmit} disabled={gameOver}>
+          Próximo
+        </button>
+      </div>
+    </form>
+  );
+};
 
-export default Form
+export default Form;
