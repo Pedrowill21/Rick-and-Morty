@@ -13,10 +13,7 @@ const NavBar = () => {
           <NavLink className={styles.link} to="/game">Game</NavLink>
       </li>
       <li>
-          <NavLink className={styles.link} to="/game">Sobre</NavLink>
-      </li>
-      <li>
-          <NavLink className={styles.link} to="/game">Contato</NavLink>
+          <NavLink className={styles.link} to="/about">Sobre</NavLink>
       </li>
     </ul>
    </nav>

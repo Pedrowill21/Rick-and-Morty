@@ -21,6 +21,10 @@ body{
   
 }
 
+.btn:hover{
+  opacity: 0.8;
+}
+
 .destaque{
   color: #97ce4c;
   font-family: 'Creepster', cursive;

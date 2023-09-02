@@ -40,3 +40,5 @@ export async function PackCharacter(qtd = 3){
 
 
 }
+
+export default PackCharacter
