@@ -26,8 +26,6 @@ const Game = () => {
     async function puxar() {
       if (pontuacao === 0) {
         setGameOver(true);
-        // Pode fazer a navegação aqui ou em outro lugar, dependendo de como você deseja lidar com o Game Over.
-        // navigate("/gameOver");
       }
 
       const Personagens = await PackCharacter();
@@ -50,15 +48,7 @@ const Game = () => {
           <Form lista={dados} controlePontuacao={controlePontuacao} />
         </div>
       )}
-      {gameOver && (
-        // Aqui, você pode exibir uma mensagem de Game Over ou outro componente, por exemplo:
-        <div className={styles.gameOver}>
-          <h2>Game Over!</h2>
-          <p>Sua pontuação chegou a 0. Você perdeu o jogo.</p>
-          {/* Adicione um botão ou link para reiniciar o jogo ou ir para a tela inicial, se desejar */}
-          <button onClick={() => navigate('/gameOver')}>Reiniciar</button>
-        </div>
-      )}
+      {gameOver && ( navigate("/gameOver") )}
     </div>
   );
 };
